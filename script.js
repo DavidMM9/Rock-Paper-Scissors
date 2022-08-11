@@ -33,8 +33,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = prompt("Make your choice: ");
-console.log(`Player Selection: ${playerSelection}`)
-playerSelection = playerSelection.toLowerCase();
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Make your choice: ");
+        console.log(`Player Selection: ${playerSelection}`)
+        playerSelection = playerSelection.toLowerCase();
+        computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
 
-console.log(playRound(playerSelection, getComputerChoice()));
+console.log(game())
