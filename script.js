@@ -1,5 +1,6 @@
-let choices = ["Rock", "Paper", "Scissors"]
+let choices = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice() {
-    return 0;
+    let randElement = choices[Math.floor(Math.random() * choices.length)];
+    console.log(randElement)
 }
